@@ -1,0 +1,16 @@
+#square of numbers using list comprehention
+n= int(input())
+print([i**2 for i in range (0,n) if i % 2 == 0])
+
+#Write a program that uses dictionary comprehension to create a dictionary where keys are number and its value is square of number
+print({i:i**2 for i in range(n) if i % 2 == 0})
+
+#write a function that takes an arguement that is dictionary and returns a dictionary where keys aee values and values are keys
+def swap(a):
+    assert isinstance(a, dict), "Input is not a dictionary"
+    return {value: key for key, value in a.items()}
+
+#print(f"flipped dictionary is \n {swap(res2)}")
+original = {'a': 1, 'b': 2, 'c': 3}
+swapped = swap(original)
+print(swapped)
